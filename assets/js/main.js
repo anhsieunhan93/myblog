@@ -40,34 +40,31 @@
     }
 
     function menuMoble() {
-        var $menu       = $('#main-nav'),
-            $menuMobile = $('#main-nav-mobile'),
-            $btnMenu    = $('.btn-menu'),
-            $menuType   = 'desktop';
-
-        $(window).on('load resize', function() {
-            var $mode = 'desktop';
-
-            if(matchMedia('only screen and (max-width: 991px)').matches) 
-                $mode = 'mobile';
-
-            if ( $mode != $menuType ) {
-                $menuType = $mode;
-
-                if ( $mode == 'mobile' ) {
-                    $menu.attr('id', 'main-nav-mobile').hide();								
-                } else {
-                    $menuMobile.attr('id', 'main-nav').removeAttr('style');
-                }
+        var $menu = $(".nav-list"),
+          $btnMenu = $(".btn-menu"),
+          $menuType = "desktop";
+    
+        $(window).on("load resize", function () {
+          var $mode = "desktop";
+    
+          if (window.matchMedia("(max-width: 991px)").matches) $mode = "mobile";
+    
+          if ($mode != $menuType) {
+            $menuType = $mode;
+    
+            if ($mode == "mobile") {
+              $menu.attr("class", "main-nav-mobile").hide();
+            } else {
+              $(".main-nav-mobile").attr("class", "nav-list").removeAttr("style");
             }
-           
-        }); 
-        
-        $btnMenu.on('click', function() {
-            $menu.toggle();
+          }
         });
-       
-    }
+    
+        $btnMenu.on("click", function () {
+          $menu.toggle();
+          $(this).toggleClass('active');
+        });
+      }
 
     function popupForm() {
         // show form

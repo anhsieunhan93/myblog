@@ -422,6 +422,38 @@ h6 {
   align-items: center;
 }
 
+/* Btn Menu */
+
+.btn-menu {
+  width: 27px;
+  height: 20px;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-menu span {
+  height: 1.5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #333;
+}
+
+.btn-menu span:nth-child(1) {
+  top: 3px;
+}
+
+.btn-menu span:nth-child(2) {
+  top: 50%;
+  margin-top: -1px;
+}
+
+.btn-menu span:nth-child(3) {
+  bottom: 3px;
+}
+
 /* breadcrumbs */
 #breadcrumbs {
   font-size: 16px;
@@ -779,6 +811,23 @@ button[type="submit"] {
   .subtr-30 {
     margin-right: -15px;
     margin-left: -15px;
+  }
+
+  /* Btn Menu */
+  .btn-menu {
+    display: block;
+  }
+
+  .btn-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translateX(-9px);
+  }
+
+  .btn-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translateX(-8px);
+  }
+
+  .btn-menu.active span:nth-child(2) {
+    display: none;
   }
 }
 
