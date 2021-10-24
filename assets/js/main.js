@@ -90,8 +90,21 @@
     });
   }
 
+  function demoThemeBox() {
+    $("body").on("mouseenter", ".demo_box img", function() {
+        var this_height = $(this).height();
+        var parent_height = $(this).parent().parent().height();
+        $(this).css("top", parent_height - this_height + "px");
+    });
+
+    $("body").on("mouseout", ".demo_box img", function() {
+        $(this).css("top", "0px");
+    });
+  }
+
   // DOM Read
-  $(function () {
+  $(function () {      
+    demoThemeBox();
     homeSlider();
     showSearchBox();
     showCartBox();

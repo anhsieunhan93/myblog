@@ -1,6 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
-@import url("resethtml5.css");
 @import url("slick.css");
+@import url("resethtml5.css");
 
 body {
   font-size: 14px;
@@ -268,4 +268,80 @@ article.detail .time {
     margin-left: auto;
     margin-right: 15px;
   }
+}
+
+/* DEMO TEMPLATE */
+.demo_box {
+  border: 1px solid #212e68;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.demo_box_inner {
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.demo_box .img {
+  height: 410px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.demo_box img {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 4s linear;
+  -webkit-transition: all 4s linear;
+  height: auto;
+  max-height: initial;
+}
+
+.demo_box .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #212e68;
+  padding: 10px 15px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(80px);
+  transition: all 0.3s ease-in-out;
+}
+
+.demo_box .title-wrap {
+  border-left: 3px solid #f47a43;
+  padding-left: 10px;
+  text-transform: uppercase;
+  margin: unset;
+  text-align: left;
+}
+
+.demo_box .title {
+  font-size: 14px;
+}
+
+.demo_box .action-wrap a {
+  display: block;
+  background-color: #f47a43;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.demo_box .action-wrap a + a {
+  margin-top: 10px;
+}
+.demo_box:hover .text {
+  transform: translateY(0);
 }
