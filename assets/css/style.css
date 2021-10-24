@@ -1,5 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("resethtml5.css");
+@import url("slick.css");
+
 body {
   font-size: 14px;
 }
@@ -59,6 +61,12 @@ body {
   color: #fff;
 }
 
+/* Slider */
+
+.contents img {
+  width: 100%;
+}
+
 article .title {
   font-size: 18px;
 }
@@ -92,7 +100,6 @@ article.detail .thumbnail {
 
 article.detail .title,
 article.detail .time {
-  /* text-align: center; */
   display: block;
   font-size: 22px;
 }

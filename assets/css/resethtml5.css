@@ -1088,3 +1088,72 @@ body {
   border: 1px #f2f2f2 solid;
   padding: 0;
 }
+
+/* Slider */
+button.slick-prev.slick-arrow, button.slick-next.slick-arrow {
+  width: 30px;
+  display: block;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #222E68;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  z-index: 9;
+  cursor: pointer;
+  border: 0;
+}
+
+.slick-arrow::after {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 20px;
+}
+
+.slick-arrow.slick-prev::after {
+  content: "\f104";
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+}
+
+.slick-arrow.slick-next::after {
+  content: "\f105";
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+  width: 35px;
+  height: 5px;
+  line-height: 20px;
+  background-color: #222E68;
+  cursor: pointer;
+}
+
+.slick-dots .slick-active {
+  background-color: #F37A43;
+}
+
+.slick-dots button {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: transparent;
+  display: none;
+}
