@@ -132,8 +132,11 @@ article.detail .time {
   display: flex;
 }
 .category li::after {
-  content: "、";
+  content: "·";
   margin-left: 10px;
+  font-size: 22px;
+  position: relative;
+  top: 3px;
 }
 .category li:last-child::after {
   display: none;
@@ -144,6 +147,16 @@ article.detail .time {
 .category li:hover > a {
   color: rgb(34, 46, 104);
 }
+
+.category {
+  display: block;
+}
+
+.category li {
+  display: inline-block;
+  margin: 0 5px 5px;
+}
+
 .pagination {
   display: flex;
 }
@@ -344,4 +357,49 @@ article.detail .time {
 }
 .demo_box:hover .text {
   transform: translateY(0);
+}
+
+/* DEMO TEMPLATE DETAIL */
+.app_head {
+  background-color: #212e68;
+  overflow: hidden;
+  color: #fff;
+}
+
+.app_head .img {
+  transform: rotate(10deg) translateY(73px);
+  max-height: 430px;
+  overflow: hidden;
+  position: relative;
+}
+
+.app_head img {
+  height: auto;
+  max-height: initial;
+}
+
+.app_head .btn {
+  border-radius: 30px;
+}
+
+.app_head .title {
+  font-size: 24px;
+}
+
+
+.supp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.supp li {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+.supp li .fa {
+  margin-right: 10px;
 }

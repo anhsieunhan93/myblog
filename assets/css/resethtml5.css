@@ -491,6 +491,14 @@ h6 {
   align-items: center;
 }
 
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
 /* Btn Menu */
 
 .btn-menu {
@@ -1102,6 +1110,10 @@ button[type="submit"] {
   -webkit-transition: background 0.3s;
   -o-transition: background 0.3s;
   transition: background 0.3s;
+}
+
+.btn.btn-danger {
+  background-color: #f47a43;
 }
 
 .btn:hover {
